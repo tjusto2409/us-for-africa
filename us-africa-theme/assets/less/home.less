@@ -1,0 +1,316 @@
+@import url("./_default.less");
+
+section {  
+
+  &.connecting {
+    padding: 40px 0 20px;
+
+    .display {
+      opacity: 0;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+    }
+
+    .panel {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 1000px) {
+      padding: 60px 0;
+
+      h1 {
+        margin-bottom: 60px;
+      }
+
+      h1 ~ .row {
+        padding: 0 30px;
+      }
+
+      .panel {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  &.real-africa {
+    
+
+    .get-know {
+      @media (min-width: 1000px) {
+        opacity: 0; 
+      }
+
+      @media (max-width: 1000px) {
+        & * {
+          opacity: 0; 
+        }
+      }
+    }
+
+    @media (max-width: 960px) {
+      text-align: center;
+    }
+
+    .device-img {      
+      display: none;
+
+      @media (min-width: 1000px)
+      {
+        opacity: 0;
+        display: block;
+        padding: 0;
+
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 44.666667%;
+        flex: 0 0 44.666667%;
+        max-width: 44.666667%;
+      }
+    }
+
+    .get-know {
+      width: 100%;
+      padding: 60px 20px;
+
+      @media (min-width: 1000px)
+      {
+        padding: 200px 55px 0;
+
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 55.333333%;
+        flex: 0 0 55.333333%;
+        max-width: 55.333333%;
+      }      
+
+      @media (min-width: 1600px) and (max-width: 1900px){
+        padding-top: 100px;
+
+        p {
+          font-size: 1.4em;
+        }
+      }
+
+      & > .row > div:nth-child(2) {
+        padding-right: 45px;
+        margin-top: 45px;
+
+        @media (max-width: 800px) {
+          padding: 0 15px;
+        }
+      }
+    }
+  }
+
+  &.about {
+    position: relative;
+
+    img {
+      position: absolute;
+      margin-left: -15px;
+      bottom: -16%;
+    }
+
+    .bkg-star-clean {
+      display: none;
+
+      @media (min-width: 1000px)
+      {
+        display: block;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 23%;
+        flex: 0 0 23%;
+        max-width: 23%;
+      }     
+    }
+
+    .bkg-negative {
+      padding: 12vh 20px;
+
+      @media (min-width: 1000px)
+      {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 29%;
+        flex: 0 0 29%;
+        max-width: 29%;
+
+        padding: 100px 50px 50px;    
+        top: -100px;
+        left: 6%;
+        margin-bottom: -100px;  
+
+        .text {
+          font-size: 1.4em;
+          padding: 60px 30px;
+        }
+      }    
+
+      .title, .text {
+        opacity: 0;
+        color: @terciary;
+        text-align: center;
+      }
+
+      .text {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  &.donate {
+    background: url("../img/bkg-donate.png");
+    position: relative;
+
+    @media (max-width: 1200px) {
+      padding-bottom: 40px;
+      text-align: center;
+    }
+
+    img {
+      opacity: 0;
+    }
+
+    .context {     
+      @media (min-width: 1000px)
+      {
+        position: relative;
+        left: -190px;
+        top: 80px; 
+        opacity: 0;
+      }  
+
+      @media (min-width: 1900px)
+      {
+        position: relative;
+        left: -200px;
+        top: 200px; 
+      } 
+
+      .upperCase {
+        margin-left: -5px;
+
+        @media (min-width: 720px) {
+          font-size: 6em;
+        }        
+      }
+
+      .text {
+        margin: 40px 0;        
+      }
+
+      @media (max-width: 1200px)
+      {
+        h1 {
+          font-size: 4em;
+          position: relative;
+          top: -25px;
+        }
+
+        .text {
+          margin-top: 0;
+        }
+
+        .upperCase, .text, a {
+          opacity: 0;
+        }
+      } 
+    }
+  }
+
+  &.africa-map {
+    margin-bottom: 5px;
+
+    .info, .map {
+      opacity: 0;
+    }
+
+    span {
+      margin-right: -20px;
+      padding: 10px 15px;
+      padding-left: 0;
+      line-height: 1.3em;
+      position: relative;
+
+      @media (max-width: 540px) { 
+        top: -5px;
+        font-size: 0.9em;
+      }
+
+      &:nth-child(6) {
+        margin-right: 0;
+      }
+
+      &.start:before {
+        content: "";
+        height: 105%;
+        width: 0;
+        position: absolute;
+        left: -2px;
+        display: inline-block;
+        background: #7e6851;
+        z-index: -1;
+        animation: title-animated 1s forwards;
+
+        @media (max-width: 540px) { 
+          top: -5px;
+        }
+      }
+      
+      @keyframes title-animated {
+        to { width: 100% }
+      }
+
+      &.light {
+        margin-left: 10px;
+      }
+    }
+
+    @media (min-width: 1000px)
+    {
+      .info {   
+        margin: 0;
+
+        h1 {
+          position: relative;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
+      }
+
+      .map {
+        margin: 0;
+      }
+    }     
+    
+    @media (max-width: 992px) {
+      padding: 40px 0;
+  
+      .row {
+        flex-direction: column-reverse;
+      }
+  
+      .map {
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        margin-left: -5px;
+
+        @media (min-width: 720px) {
+          font-size: 3em;
+        }
+      }
+
+      span {
+        margin-right: -20px;
+        padding: 10px 15px 10px 5px;
+        line-height: 1.4em;
+
+        &:nth-child(6) {
+          padding-right: 5px;
+          margin-right: 2px;
+        }
+      }
+    }
+  }  
+}

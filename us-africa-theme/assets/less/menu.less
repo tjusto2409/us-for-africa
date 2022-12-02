@@ -1,0 +1,91 @@
+@import url("./_default.less");
+
+html, body, .menu {
+  height: 100%;
+}
+
+.menu {
+  position: absolute;
+  // display: none;
+  opacity: 0;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: @secondary;
+  transition: all .5s ease-in-out;
+
+  &.open {
+    // display: block;
+    z-index: 1;
+    opacity: 1;    
+  }
+}
+
+.menu > div {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu {
+  .open-menu {
+    min-height: 550px;
+
+    nav {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+
+      .item-menu {
+        margin-bottom: 40px;
+    
+        a {
+          color: @terciary;
+          font-size: 4.5em;
+          display: inline-block;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          text-transform: uppercase;
+          text-decoration: none;
+          opacity: 0;
+
+          @media (max-width: 1200px) {
+            font-size: 2.9em;
+          }
+
+          &::before {
+            content: "";
+            display: inline-block;
+            width: 0;
+            height: 40px;
+            background: @terciary;
+            position: absolute;
+            bottom: 0;
+            left: -2.5%;
+            z-index: -1;
+            background: @primary;
+            transition: all .5s ease-in-out;
+          }
+    
+          &:hover, &:focus, &:active {
+            &::before {
+              width: 105%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bkg-menu {
+    background: url("../img/img-menu.png") no-repeat center;
+    background-size: contain;
+    opacity: 0;
+
+    @media (max-width: 720px) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import url("./_default.less");
+
+footer {
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+* {
+  color: white;
+}
+
+.social-media {
+  float: right;
+}
+
+.social-media span, p {
+  text-transform: uppercase;
+  font-family: axiforma-regular;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bkg-social-media {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: bottom;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.instagram {
+  background-image: url("../img/instagram.png");
+}
+
+.facebook {
+  background-image: url("../img/facebook.png");
+}
+
+@media (max-width: 720px) {
+  p {
+    font-size: 0.8em;
+    padding: 5px 0;
+  }
+
+  .social-media span {
+    display: none;
+  }
+}

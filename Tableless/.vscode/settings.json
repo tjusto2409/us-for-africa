@@ -1,0 +1,20 @@
+{
+    "less.compile": {
+        "main": [
+          "home.less",
+          "what-we-do.less",
+          "donate.less",
+          "contact.less",
+          "menu.less",
+          "footer.less",
+          "store.less"
+        ],
+        "compress": true,
+        "sourceMap": true,
+        "out": "../css/",
+        "relativeUrls": true
+    },
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+}

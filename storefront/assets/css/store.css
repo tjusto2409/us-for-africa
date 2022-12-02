@@ -1,0 +1,78 @@
+@font-face {
+    font-family: axiforma-black;
+    src: url('../axiforma-fonts/axiforma-black.otf');
+}
+
+@font-face {
+    font-family: axiforma-bold;
+    src: url('../axiforma-fonts/axiforma-bold.otf');
+}
+
+@font-face {
+    font-family: axiforma-heavy;
+    src: url('../axiforma-fonts/axiforma-heavy.otf');
+}
+
+@font-face {
+    font-family: axiforma-regular;
+    src: url('../axiforma-fonts/axiforma-regular.otf');
+}
+
+@font-face {
+    font-family: axiforma-semibold;
+    src: url('../axiforma-fonts/axiforma-semibold.otf');
+}
+
+* {
+    font-family: axiforma-regular;
+}
+
+.banner-header {
+    display: none
+}
+  
+.banner-store {
+    height: 500px;
+    background-position: center;
+    position: relative;
+    top: -80px;
+    background-repeat: no-repeat;
+    margin-bottom: -80px;
+}
+
+@media (max-width: 1200px) {
+    .banner-store {height: 50vh;}
+}
+
+.site-search {
+    display: none;
+}
+
+.button  {
+    padding: 10px 50px;
+    font-size: 1em;
+}
+
+.main-navigation ul li a:hover, .main-navigation ul li:hover > a, 
+.site-title a:hover, .site-header ul.menu li.current-menu-item > a,
+.nav-menu > li.current_page_item > a, li > a:focus {
+    color: #7e6851;
+    border-bottom: 3px solid #7e6851;
+    font-family: axiforma-bold;
+}
+
+a:focus, input:focus, textarea:focus, button:focus {
+    outline: none;
+}
+
+ul.nav-menu li {
+    margin-right: 1.618em;    
+}
+
+.main-navigation ul.nav-menu > li > a {
+    padding: 1.618em 1em;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+

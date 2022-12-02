@@ -1,0 +1,88 @@
+.wrapper-menu {
+  header {
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;  
+  
+    @media (max-width: 720px) {
+      & {
+        padding: 15px 0;
+      }
+    }
+  
+    .logo {
+      background: url("./../img/logo.png") no-repeat left;
+      background-size: contain;
+      height: 30px;
+      width: 100%;
+    }
+  
+    .box-menu {
+      cursor: pointer;
+      position: relative;
+      height: 100%;
+      width: 50px;
+      left: calc(100% - 50px);
+  
+      .menu-btn__burguer {
+        width: 25px;
+        height: 6px;
+        background: @primary;
+        position: absolute;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+        transform: translateY(10px);
+        right: 0;
+  
+        &::after, &::before {
+          content: '';
+          position: absolute;
+          height: 6px;
+          background: @primary;
+          position: absolute;
+          border-radius: 5px;
+          right: 0;
+          transition: all .5s ease-in-out;
+        }
+  
+        &::after {
+          transform: translateY(-10px);
+          width: 37.5px;
+        }
+  
+        &::before {
+          transform: translateY(10px);
+          width: 12.5px;
+        }
+  
+        &.menu-btn__open {
+          transform: translate(-50px, 10px);
+          background: transparent;
+  
+          &::after {
+            transform: rotate(45deg) translate(35px, -35px);
+            width: 100%;
+          }
+  
+          &::before {
+            transform: rotate(-45deg) translate(35px, 35px);
+            width: 100%;
+          }
+        }
+  
+        &.menu-btn__over {
+          width: 37.5px;
+  
+          &::before {
+            width: 37.5px;
+          }
+        }
+      }
+    }  
+  }
+}
+
+
+
+

@@ -1,0 +1,52 @@
+@import url("./_default.less");
+
+body {
+  background: @terciary;
+}
+
+.banner-header {
+  display: none
+ }
+
+.banner-store {
+  height: 500px;
+  background-position: center;
+
+  @media (max-width: 1200px) {
+    height: 50vh;
+  }
+}
+
+.store {
+  margin-top: 40px;
+
+  .bag {
+    margin-bottom: 30px;
+    .device-img {
+      height: 50vh;
+
+      @media (max-width: 540px) {
+        height: 450px;
+      }
+    }
+  
+    .info {
+      margin: 20px 5px;
+  
+      .desc {
+        font-family: axiforma-regular; 
+        font-size: 1em;
+      }
+  
+      .price {
+        font-family: axiforma-semibold;
+        color: @primary; 
+      }
+    }
+  
+    .button {
+      padding: 10px 50px;
+      font-size: 1em;
+    }
+  }
+}

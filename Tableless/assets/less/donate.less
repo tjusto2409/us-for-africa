@@ -1,0 +1,47 @@
+@import url("./_default.less");
+
+section {
+  &.banner-header {
+    background-image: url("../img/banner_donate.png");
+  }
+
+  &.wrapper {
+    padding: 80px 0 120px;
+
+    @media (max-width: 960px) {
+      padding: 0;
+    }
+
+    .title-mobile {
+      @media (max-width: 960px) {
+        margin-bottom: -20%;
+      }      
+    }
+
+    p, .button {
+      @media (min-width: 720px) {
+        font-size: 1.4em;
+      }
+    }
+
+    & .text {
+      @media (max-width: 720px) {
+        margin: 30px 0;
+      }      
+
+      @media (min-width: 720px) and (max-width: 1200px) {
+        margin: 60px 0;
+      }
+    }
+
+    .display {
+      font-family: axiforma-bold;
+    }
+
+    p {
+      @media (max-width: 720px) {
+        font-size: 1em;
+      }
+    }
+  }
+}

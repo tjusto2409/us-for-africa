@@ -1,0 +1,13 @@
+.setPaddingAdjustmentSizeImg(@url) {
+  @maxHeight: (image-width(@url) / image-height(@url));
+  @maxWidth: (image-height(@url) / image-width(@url));
+
+  @calc: if(image-height(@url) > image-width(@url), @maxHeight, @maxWidth);
+  @percent: percentage(@calc);
+
+  // height: calc(unit(@calc) * 100vw);
+  width: 100%;
+  background: url(@url) center no-repeat;  
+  background-size: contain;
+  padding-top: @percent;
+}
